@@ -1,0 +1,89 @@
+@media(max-width:1024px) {
+    .cityFun form {
+        display: block;
+    }
+
+    .cityFun form select {
+        width: 100%;
+    }
+
+    .country_box,
+    .region_box,
+    .city_box {
+        margin-bottom: 15px;
+    }
+
+    .location .btn_gen {
+        margin: 0px 5px 10px 0px;
+    }
+}
+
+@media(max-width:991px) {
+    .cityFun form {
+        width: 100%;
+    }
+
+    .places {
+        padding: 30px;
+    }
+
+    .form_entity {
+        padding: 30px;
+    }
+
+    .datapart label {
+        width: 40%;
+    }
+
+    .contribute_buttons {
+        width: 43%;
+        margin-right: auto;
+    }
+
+    .form_entity h2 {
+        margin-bottom: 30px;
+    }
+
+    .signIn_form {
+        width: auto;
+    }
+}
+
+
+@media(max-width:767px) {
+    h1 {
+        font-size: 33px;
+    }
+
+    .cp60 {
+        padding: 40px 15px;
+    }
+
+    .places {
+        padding: 20px;
+    }
+
+    .footer {
+        padding: 40px 15px 20px 15px;
+    }
+
+    .footer_content {
+        margin-bottom: 30px;
+    }
+
+    .form_entity {
+        padding: 30px;
+    }
+
+    .datapart {
+        flex-direction: column;
+    }
+
+    .datapart label {
+        width: 100%;
+    }
+
+    .contribute_buttons {
+        width: auto;
+    }
+}
