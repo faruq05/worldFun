@@ -44,8 +44,10 @@ function addPicture() {
     if (numPictures < 5) {
         const newPictureDiv = document.createElement('div');
         newPictureDiv.innerHTML = `
-            <label for="picture">Picture:</label>
-            <input type="file" name="picture[]" accept="image/*" required>
+        <div class="datapart">
+        <label for="picture">Picture:</label>
+        <input type="file" name="picture[]" accept="image/*" class="form-control" required>
+        </div>
         `;
         picturesContainer.appendChild(newPictureDiv);
 
