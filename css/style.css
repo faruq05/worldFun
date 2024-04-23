@@ -39,9 +39,9 @@ h1 {
 
 h2 {
     font-size: 26px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 31px;
-    color: var(--cs-white);
+    color: var(--cs-black);
 }
 
 h3 {
@@ -131,8 +131,13 @@ select {
     color: var(--cs-blue);
 }
 
-.navbar-nav .nav-item.active .nav-link {
+.nav-link:focus{
+    color: var(--cs-subprimary);
+}
+
+.active a {
     font-weight: 500;
+    color: var(--cs-blue) !important;
 }
 
 .user_portal ul {
@@ -160,6 +165,10 @@ select {
 .banner .row {
     min-height: 300px;
     align-items: center;
+}
+
+.banner_content h2 {
+    color: var(--cs-white);
 }
 
 /* banner ends */
@@ -230,12 +239,15 @@ select {
 .image_gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px; /* Adjust as needed for spacing between columns */
+    gap: 15px;
+    /* Adjust as needed for spacing between columns */
 }
 
 .image_gallery .col {
-    flex: 1 0 200px; /* Each column should take up equal space, adjust width as needed */
-    max-width: 100%; /* Ensure each column does not exceed its container */
+    flex: 1 0 200px;
+    /* Each column should take up equal space, adjust width as needed */
+    max-width: 100%;
+    /* Ensure each column does not exceed its container */
 }
 
 /* Adjust image styles for responsiveness */
@@ -349,8 +361,42 @@ select {
 }
 
 
+/* about page starts============= */
+.wd {
+    width: 60%;
+    padding-top: 10px;
+    margin: auto;
+    font-weight: 600;
+}
+
+.cta {
+
+    background-color: #fffcf7;
+    padding: 30px;
+    width: 75%;
+    margin: auto;
+    margin-top: 30px;
+    border: 1px solid var(--cs-bg);
+    border-radius: 10px;
+}
+
+/* .contact_page */
+.contact {
+    width: 40%;
+    margin: auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: 600;
+}
+
+
 /* ofcanvas */
-.sidemenu{
+.sidemenu {
     display: none;
 }
 
@@ -359,15 +405,18 @@ select {
     cursor: pointer;
     border-radius: 5px;
     padding: 8px;
+    background-color: var(--cs-white);
 }
 
-.side_button  i {
+.side_button i {
     font-size: 20px;
+    color: var(--cs-black);
 }
 
 .side_button:hover {
-    background-color: #ccc;
+    background-color: var(--cs-black);
 }
+
 
 .sideOffcanvas {
     position: fixed;
@@ -381,6 +430,7 @@ select {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 0px 0px 0px 20px;
     display: block;
+    outline: none;
 }
 
 .sideOffcanvas.show {
@@ -388,7 +438,10 @@ select {
 }
 
 .offcanvas-body {
-    padding: 50px 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .offcanvas-backdrop.show {
@@ -399,61 +452,16 @@ select {
     opacity: 0;
 }
 
-#sideCloseOffcanvas{
+#sideCloseOffcanvas {
     padding: 20px;
     color: var(--cs-white);
     background-color: transparent;
     border: none;
 }
 
-@media (min-width: 576px) {
-    .container {
-        max-width: 540px;
-    }
-}
 
-@media (min-width: 768px) {
-    .container {
-        max-width: 720px;
-    }
-}
-
-@media (min-width: 992px) {
-    .container {
-        max-width: 960px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1140px;
-    }
-}
-
-@media (min-width: 1400px) {
-    .container {
-        max-width: 1320px;
-    }
-}
-
-@media only screen and (min-width: 320px) and (max-width: 767px) {
-
-    .sideOffcanvas {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 100%;
-        background-color: white;
-        height: 100%;
-        transition: right 0.3s ease;
-        z-index: 1050;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-}
 
 .offcanvas-body ul {
-    display: block;
     text-align: center;
 }
 

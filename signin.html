@@ -25,17 +25,13 @@
             <div class="container">
                 <div class="col-md-3">
                     <a class="navbar-brand" href="#"><img src="images/logo.png" class="img-fluid" alt="logo"></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
                 </div>
-                <div class="col-md-6">
+
+                <div class="col-md-6 nav_responsive">
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
-                            <li class="nav-item active">
-                                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="index.html">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="contribute.html">Contribute</a>
@@ -53,8 +49,8 @@
                 <div class="col-md-3 usp">
                     <div class="user_portal">
                         <ul>
-                            <li class="me-4">
-                                <a class="nav-link" href="signin.html"><i class="fa-solid fa-user pe-1"></i> SignIn</a>
+                            <li class="active me-4">
+                                <a class="nav-link" aria-current="page" href="signin.html"><i class="fa-solid fa-user pe-1"></i> SignIn</a>
                             </li>
                             <li>
                                 <a class="nav-link" href="register.html">Resgister</a>
@@ -63,33 +59,48 @@
                     </div>
                 </div>
                 <!-- offcanvas -->
-                <div class="col-md-3 sidemenu">
-                    <button class="side_button" data-bs-toggle="offcanvas" data-bs-target="#sideOffcanvas">
-                        <i class="fa-solid fa-bars"></i>
-                    </button>
 
-                    <div class="sideOffcanvas offcanvas-end" tabindex="-1" id="sideOffcanvas"
-                        aria-labelledby="sideOffcanvasLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="sideOffcanvasLabel">Menu</h5>
-                            <button type="button" class="fa-solid fa-x" id="sideCloseOffcanvas"
-                                aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
-                                <li class="nav-item active">
-                                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="contribute.html">Contribute</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="about.html">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Contact</a>
-                                </li>
-                            </ul>
+                <div class="col-md-3">
+                    <div class="sidemenu">
+                        <a class="side_button" data-bs-toggle="offcanvas" data-bs-target="#sideOffcanvas">
+                            <i class="fa-solid fa-bars"></i>
+                        </a>
+
+                        <div class="sideOffcanvas offcanvas-end" tabindex="-1" id="sideOffcanvas"
+                            aria-labelledby="sideOffcanvasLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="sideOffcanvasLabel"></h5>
+                                <button type="button" class="fa-solid fa-x" id="sideCloseOffcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="contribute.html">Contribute</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="about.html">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="contact.html">Contact</a>
+                                    </li>
+                                </ul>
+                                <div class="user_portal">
+                                    <ul>
+                                        <li class="active me-4">
+                                            <a class="nav-link" aria-current="page" href="signin.html"><i class="fa-solid fa-user pe-1"></i>
+                                                SignIn</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link" href="register.html">Resgister</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -97,7 +108,6 @@
         </nav>
     </div>
     <!-- header ends============================ -->
-
     <!-- banner starts =========================== -->
     <div class="banner cp60" id="banner">
         <div class="container">
@@ -206,7 +216,7 @@
     <script src="js/script.js"></script>
     <script src="js/cityFunjs"></script>
     <script src="js/venobox.js"></script>
-    <script src="js/signIn.js"></script>
+    <script src="js/user_form.js"></script>
     <script>
         // jQuery Version
         $('.venobox').venobox({
@@ -217,49 +227,6 @@
             new VenoBox();
         });
     </script>
-    <!-- <script src="js/script.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script>
-        new WOW().init();
-    </script>
-    <script>
-        $(document).ready(function () {
-            $(".owl-carousel").owlCarousel(
-                {
-                    items: 1,
-                    loop: true,
-                    autoplay: true,
-                    autoplayTimeout: 5000,
-                    smartSpeed: 500,
-                    margin: 20,
-                    nav: true,
-                    dots: false,
-                    touchDrag: true,
-                    mouseDrag: true,
-                    autoplayHoverPause: true,
-                    navText: ["<i class='fa-solid fa-arrow-left'></i>", "<i class='fa-solid fa-arrow-right'></i>"],
-                    responsive: {
-                        0: {
-                            items: 1,
-                        },
-                        425: {
-                            items: 1,
-                        },
-                        767: {
-                            items: 1,
-                        },
-                        768: {
-                            items: 1,
-                        },
-
-
-                    }
-                }
-            );
-
-        });
-    </script> -->
-</body>
+    </body>
 
 </html>

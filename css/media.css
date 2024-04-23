@@ -16,6 +16,12 @@
     .location .btn_gen {
         margin: 0px 5px 10px 0px;
     }
+
+
+    /* contact page */
+    .contact {
+        width: 60%;
+    }
 }
 
 @media(max-width:991px) {
@@ -47,6 +53,45 @@
     .signIn_form {
         width: auto;
     }
+
+    /* offcanvas */
+    .nav_responsive {
+        display: none;
+    }
+
+    .sidemenu {
+        display: block;
+        text-align: end;
+    }
+
+    .usp {
+        display: none;
+    }
+
+    .sideOffcanvas {
+        width: 30%;
+        height: 61%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* about page */
+    .wd {
+        width: auto;
+    }
+
+    .cta {
+        padding: 20px;
+        width: auto;
+    }
+
+    /* contact page */
+    .contact {
+        width: auto;
+    }
+
 }
 
 
@@ -85,5 +130,61 @@
 
     .contribute_buttons {
         width: auto;
+    }
+
+    /* offcanvas */
+    .nav_responsive {
+        display: none;
+    }
+
+    .sidemenu {
+        display: block;
+        text-align: end;
+    }
+
+    .sideOffcanvas {
+        width: 40%;
+        height: 61%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* about page */
+    .wd {
+        width: auto;
+    }
+
+    .cta {
+        padding: 20px;
+        width: auto;
+        text-align: center;
+    }
+
+    .reach {
+        text-align: center !important;
+    }
+
+}
+
+@media(max-width:575px) {
+    .sideOffcanvas {
+        width: 50%;
+        height: 60%;
+    }
+}
+
+@media(max-width:475px) {
+    .sideOffcanvas {
+        width: 75%;
+        height: 60%;
+    }
+}
+
+@media(max-width:320px) {
+    .sideOffcanvas {
+        width: 80%;
+        height: 60%;
     }
 }
