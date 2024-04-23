@@ -36,7 +36,7 @@ $('#close').click(function () {
     $('#popup').css('display', 'none');
 })
 
-//contribute form pictures
+//contribute form add pictures js
 function addPicture() {
     const picturesContainer = document.getElementById('pictures');
     const numPictures = picturesContainer.children.length;
@@ -60,6 +60,8 @@ function addPicture() {
     }
 }
 
+
+//offcanvas close button
 document.addEventListener("DOMContentLoaded", function () {
     const sideButton = document.querySelector(".side_button");
     const sideOffcanvas = document.getElementById("sideOffcanvas");
