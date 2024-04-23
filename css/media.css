@@ -104,6 +104,10 @@
         padding: 40px 15px;
     }
 
+    .banner .row {
+        min-height: 190px;
+    }
+
     .places {
         padding: 20px;
     }
